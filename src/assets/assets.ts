@@ -23,6 +23,7 @@ import PS5_c from '../assets/images/ps5_c.png'
 import Women_c from '../assets/images/women_c.png'
 import Qr_code from '../assets/images/Qr_code.png'
 import sign_up from '../assets/images/sign_up.png'
+import Log_in from '../assets/images/Log_in.png'
 export const assets = {
        hero_img,
        apple_logo,
@@ -48,5 +49,6 @@ export const assets = {
        PS5_c,
       Women_c,
      Qr_code,
-     sign_up
+     sign_up,
+     Log_in
 }

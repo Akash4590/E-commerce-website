@@ -14,7 +14,7 @@ function Home() {
   return (
     <div>
     <AnnouncementBar/>
-    <Navbar/>
+  <Navbar showIcons={true} />
     <Hero/>
   <FlashSales/>
   <Categories/>
