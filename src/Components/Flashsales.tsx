@@ -78,17 +78,14 @@ const FlashSales = () => {
         let { days, hours, minutes, seconds } = prev;
 
         seconds--;
-
         if (seconds < 0) {
           seconds = 59;
           minutes--;
         }
-
         if (minutes < 0) {
           minutes = 59;
           hours--;
         }
-
         if (hours < 0) {
           hours = 23;
           days--;
@@ -96,12 +93,7 @@ const FlashSales = () => {
 
         if (days < 0) return prev;
 
-        return {
-          days,
-          hours,
-          minutes,
-          seconds,
-        };
+        return { days, hours, minutes, seconds };
       });
     }, 1000);
 
@@ -132,11 +124,10 @@ const FlashSales = () => {
   );
 
   return (
-    <section className="max-w-7xl mx-auto px-4 pt-16 pb-10">
+    <section className="max-w-7xl mx-auto px-4 lg:px-6 pt-16 pb-10">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
         <div>
-          {/* Small Badge */}
           <div className="flex items-center gap-3 mb-4">
             <span className="w-4 h-8 bg-red-500 rounded-sm"></span>
             <span className="text-red-500 text-sm font-semibold">
@@ -144,7 +135,6 @@ const FlashSales = () => {
             </span>
           </div>
 
-          {/* Title + Timer */}
           <div className="flex flex-wrap items-center gap-8">
             <h2 className="text-3xl font-bold text-black">
               Flash Sales
@@ -174,21 +164,15 @@ const FlashSales = () => {
         </div>
       </div>
 
-      {/* Products Section */}
-      <div className="overflow-hidden pl-2 lg:pl-4">
-        <div className="flex gap-6">
-          {flashProducts.map((product) => (
-            <div
-              key={product.id}
-              className="w-[255px] lg:w-[260px] flex-shrink-0"
-            >
-              <ProductCard
-                product={product}
-                showDiscount
-              />
-            </div>
-          ))}
-        </div>
+      {/* Products Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {flashProducts.slice(0, 4).map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            showDiscount
+          />
+        ))}
       </div>
 
       {/* View All Button */}

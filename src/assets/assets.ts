@@ -17,6 +17,12 @@ import product_5 from '../assets/images/product_5.png'
 import product_6 from '../assets/images/product_6.png'
 import product_7 from '../assets/images/product_7.png'
 import product_8 from '../assets/images/product_8.png'
+import Gucci_c from '../assets/images/Gucci_c.png'
+import Speaker_c from '../assets/images/Speaker_c.png'
+import PS5_c from '../assets/images/ps5_c.png'
+import Women_c from '../assets/images/women_c.png'
+import Qr_code from '../assets/images/Qr_code.png'
+import sign_up from '../assets/images/sign_up.png'
 export const assets = {
        hero_img,
        apple_logo,
@@ -36,5 +42,11 @@ export const assets = {
        product_5,
        product_6,
        product_7,
-       product_8     
+       product_8,
+       Gucci_c,
+       Speaker_c,
+       PS5_c,
+      Women_c,
+     Qr_code,
+     sign_up
 }
