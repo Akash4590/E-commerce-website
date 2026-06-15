@@ -24,6 +24,10 @@ import Women_c from '../assets/images/women_c.png'
 import Qr_code from '../assets/images/Qr_code.png'
 import sign_up from '../assets/images/sign_up.png'
 import Log_in from '../assets/images/Log_in.png'
+import About_1st from '../assets/images/About_1st.png'
+import Tom_1 from '../assets/images/Tom_1.png'
+import Emma_2 from '../assets/images/Emma_2.png'
+import will_3 from '../assets/images/will_3.png'
 export const assets = {
        hero_img,
        apple_logo,
@@ -50,5 +54,11 @@ export const assets = {
       Women_c,
      Qr_code,
      sign_up,
-     Log_in
+     Log_in,
+     About_1st,
+     Tom_1,
+     Emma_2,
+     will_3
+
+
 }

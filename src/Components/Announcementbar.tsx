@@ -2,16 +2,26 @@ import { ChevronDown } from "lucide-react";
 
 const AnnouncementBar = () => {
   return (
-    <div className="bg-black text-white text-sm py-2 px-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-center relative">
-        <p className="text-center text-xs sm:text-sm">
+    <div className="bg-black text-white px-4 py-2">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+        
+        {/* Empty div for desktop alignment */}
+        <div className="hidden sm:block w-20"></div>
+
+        {/* Announcement Text */}
+        <p className="text-[11px] sm:text-sm text-center">
           Summer Sale For All Swim Suits And Free Express Delivery – OFF 50%!{" "}
-          <a href="#" className="font-semibold underline hover:text-gray-300 transition-colors">
-            ShopNow
+          <a
+            href="#"
+            className="font-semibold underline hover:text-gray-300 transition-colors ml-1"
+          >
+            Shop Now
           </a>
         </p>
-        <div className="absolute right-0 flex items-center gap-1 cursor-pointer hover:text-gray-300 transition-colors">
-          <span className="text-xs sm:text-sm">English</span>
+
+        {/* Language Selector */}
+        <div className="flex items-center gap-1 cursor-pointer hover:text-gray-300 transition-colors text-xs sm:text-sm">
+          <span>English</span>
           <ChevronDown size={14} />
         </div>
       </div>
