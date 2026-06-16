@@ -28,6 +28,14 @@ import About_1st from '../assets/images/About_1st.png'
 import Tom_1 from '../assets/images/Tom_1.png'
 import Emma_2 from '../assets/images/Emma_2.png'
 import will_3 from '../assets/images/will_3.png'
+import wishP_1 from '../assets/images/wishP_1.png'
+import wishP_2 from '../assets/images/WishP_2.png'
+import wishP_3 from '../assets/images/wishP_3.png'
+import wishP_4 from '../assets/images/wishP_4.png'
+import Fy_pc from '../assets/images/Fy_pc.png'
+import fy_monitor from '../assets/images/fy_monitor.png'
+import fy_mouse from '../assets/images/fy_mouse.png'
+import fy_keyboard from '../assets/images/fy_keyboard.png'
 export const assets = {
        hero_img,
        apple_logo,
@@ -58,7 +66,17 @@ export const assets = {
      About_1st,
      Tom_1,
      Emma_2,
-     will_3
+     will_3,
+     wishP_1,
+     wishP_2,
+     wishP_3,
+     wishP_4,
+     Fy_pc,
+     fy_monitor,
+     fy_mouse,
+     fy_keyboard,
+
+
 
 
 }

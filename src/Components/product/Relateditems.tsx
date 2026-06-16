@@ -1,5 +1,5 @@
 import { Heart, Eye } from "lucide-react";
-
+import { assets } from "../../assets/assets";
 interface RelatedProduct {
   id: number;
   name: string;
@@ -19,7 +19,7 @@ const relatedProducts: RelatedProduct[] = [
     originalPrice: 160,
     rating: 4,
     reviewCount: 88,
-    image: "/images/product-1.jpg",
+    image: assets.Fy_pc,
     discount: 40,
   },
   {
@@ -29,7 +29,7 @@ const relatedProducts: RelatedProduct[] = [
     originalPrice: 1160,
     rating: 4,
     reviewCount: 75,
-    image: "/images/product-2.jpg",
+    image: assets.fy_monitor,
     discount: 35,
   },
   {
@@ -39,7 +39,7 @@ const relatedProducts: RelatedProduct[] = [
     originalPrice: 400,
     rating: 5,
     reviewCount: 99,
-    image: "/images/product-1.jpg",
+    image: assets.fy_mouse,
     discount: 30,
   },
   {
@@ -49,7 +49,7 @@ const relatedProducts: RelatedProduct[] = [
     originalPrice: 170,
     rating: 5,
     reviewCount: 65,
-    image: "/images/product-2.jpg",
+    image: assets.fy_keyboard,
   },
 ];
 

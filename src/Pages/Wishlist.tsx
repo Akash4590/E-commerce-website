@@ -4,6 +4,7 @@ import { Trash2, ShoppingCart, Eye } from "lucide-react";
 import AnnouncementBar from "../Components/Announcementbar";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { assets } from "../assets/assets";
 
 interface WishlistProduct {
   id: number;
@@ -32,26 +33,26 @@ const initialWishlist: WishlistProduct[] = [
     name: "Gucci duffle bag",
     price: 960,
     originalPrice: 1160,
-    image: "/images/product-1.jpg",
+    image:assets.wishP_1,
     discount: 35,
   },
   {
     id: 2,
     name: "RGB liquid CPU Cooler",
     price: 1960,
-    image: "/images/product-2.jpg",
+    image: assets.wishP_2,
   },
   {
     id: 3,
     name: "GP11 Shooter USB Gamepad",
     price: 550,
-    image: "/images/product-1.jpg",
+    image: assets.wishP_3,
   },
   {
     id: 4,
     name: "Quilted Satin Jacket",
     price: 750,
-    image: "/images/product-2.jpg",
+    image: assets.wishP_4,
   },
 ];
 
@@ -63,7 +64,7 @@ const recommendedProducts: RecommendedProduct[] = [
     originalPrice: 1160,
     rating: 5,
     reviewCount: 65,
-    image: "/images/product-1.jpg",
+    image: assets.Fy_pc,
     discount: 35,
   },
   {
@@ -72,7 +73,7 @@ const recommendedProducts: RecommendedProduct[] = [
     price: 1160,
     rating: 5,
     reviewCount: 65,
-    image: "/images/product-2.jpg",
+    image: assets.fy_monitor,
   },
   {
     id: 3,
@@ -80,7 +81,7 @@ const recommendedProducts: RecommendedProduct[] = [
     price: 560,
     rating: 5,
     reviewCount: 65,
-    image: "/images/product-1.jpg",
+    image: assets.fy_mouse,
     isNew: true,
   },
   {
@@ -89,7 +90,7 @@ const recommendedProducts: RecommendedProduct[] = [
     price: 200,
     rating: 5,
     reviewCount: 65,
-    image: "/images/product-2.jpg",
+    image: assets.fy_keyboard,
   },
 ];
 

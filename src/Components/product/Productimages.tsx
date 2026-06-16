@@ -1,13 +1,23 @@
 import { useState } from "react";
+import { assets } from "../../assets/assets";
+interface Product {
+  id: number;
+  name: string;
+  image: string;
+}
 
-const thumbnails = [
-  "/images/product-thumb-1.jpg",
-  "/images/product-thumb-2.jpg",
-  "/images/product-thumb-3.jpg",
-  "/images/product-thumb-4.jpg",
-];
+interface ProductImagesProps {
+  product: Product;
+}
 
-const ProductImages = () => {
+const ProductImages = ({ product }: ProductImagesProps) => {
+  const thumbnails = [
+    product.image,
+    product.image,
+    product.image,
+    product.image,
+  ];
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -25,13 +35,9 @@ const ProductImages = () => {
             }`}
           >
             <img
-              src={src}
-              alt={`Product view ${i + 1}`}
+              src={assets.Fy_pc}
+              alt={`${product.name} ${i + 1}`}
               className="w-full h-full object-contain p-2"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = "";
-                (e.target as HTMLImageElement).parentElement!.style.background = "#f3f4f6";
-              }}
             />
           </button>
         ))}
@@ -41,11 +47,8 @@ const ProductImages = () => {
       <div className="flex-1 bg-gray-100 rounded overflow-hidden flex items-center justify-center min-h-[460px]">
         <img
           src={thumbnails[activeIndex]}
-          alt="Product main"
+          alt={product.name}
           className="w-full h-full object-contain p-8 max-h-[460px]"
-          onError={(e) => {
-            (e.target as HTMLImageElement).style.opacity = "0";
-          }}
         />
       </div>
     </div>
