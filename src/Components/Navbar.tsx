@@ -20,7 +20,7 @@ const Navbar = ({ showIcons = true }: NavbarProps) => {
     { name: "Home", path: "/" },
     { name: "Contact", path: "/contact" },
     { name: "About", path: "/about" },
-    { name: "Products", path: "/product" },
+    { name: "Products", path: "/Wishlist" },
     { name: "Sign Up", path: "/signup" },
   ];
 

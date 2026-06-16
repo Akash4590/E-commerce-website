@@ -4,7 +4,9 @@ import Signup from "./Pages/Signup";
 import Login from "./Pages/Login";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact"
+import Wishlist from "./Pages/Wishlist";
 import ProductDetails from "./Pages/ProductDetails";
+
 function App() {
   return (
     <Routes>
@@ -13,7 +15,8 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path ="/about" element={<About/>}/>
       <Route path="/contact" element={<Contact/>}/>
-       <Route path="/product" element={<ProductDetails />} />
+      <Route path = "/Wishlist" element={<Wishlist/>}/>
+      <Route path="/productDetails/:id" element={<ProductDetails />} />
     </Routes>
   );
 }
