@@ -115,10 +115,10 @@ const ProductInfo = ({
               onClick={() =>
                 setSelectedColor(i)
               }
-              className={`w-5 h-5 rounded-full ${
+              className={` w-5 h-5 rounded-full ${
                 selectedColor === i
                   ? "ring-2 ring-offset-2 ring-gray-400"
-                  : ""
+                  : "" 
               }`}
               style={{
                 backgroundColor: color,
@@ -141,7 +141,7 @@ const ProductInfo = ({
               onClick={() =>
                 setSelectedSize(size)
               }
-              className={`w-9 h-9 text-xs font-medium rounded border ${
+              className={`w-9 h-9 text-xs cursor-pointer font-medium rounded border ${
                 selectedSize === size
                   ? "bg-red-500 text-white border-red-500"
                   : "border-gray-300"
@@ -158,7 +158,7 @@ const ProductInfo = ({
         <div className="flex items-center border border-gray-300 rounded overflow-hidden h-11">
           <button
             onClick={decrement}
-            className="w-10 h-full flex items-center justify-center border-r"
+            className="w-10 h-full flex items-center justify-center border-r cursor-pointer"
           >
             <Minus size={14} />
           </button>
@@ -169,17 +169,17 @@ const ProductInfo = ({
 
           <button
             onClick={increment}
-            className="w-10 h-full flex items-center justify-center bg-red-500 text-white"
+            className="w-10 h-full flex items-center justify-center bg-red-500 text-white cursor-pointer"
           >
             <Plus size={14} />
           </button>
         </div>
 
-        <button className="flex-1 h-11 bg-red-500 text-white rounded">
+        <button className="flex-1 h-11 bg-red-500 text-white rounded cursor-pointer">
           Buy Now
         </button>
 
-        <button className="w-11 h-11 border border-gray-300 rounded flex items-center justify-center">
+        <button className="w-11 h-11 border border-gray-300 rounded flex items-center justify-center cursor-pointer">
           <Heart size={18} />
         </button>
       </div>
@@ -190,7 +190,7 @@ const ProductInfo = ({
           <Truck
             size={36}
             strokeWidth={1.5}
-            className="text-gray-800 flex-shrink-0 mt-0.5"
+            className="text-gray-800 flex-shrink-0 mt-0.5 cursor-pointer"
           />
 
           <div>
@@ -209,7 +209,7 @@ const ProductInfo = ({
           <RefreshCw
             size={36}
             strokeWidth={1.5}
-            className="text-gray-800 flex-shrink-0 mt-0.5"
+            className="text-gray-800 flex-shrink-0 mt-0.5 cursor-pointer"
           />
 
           <div>

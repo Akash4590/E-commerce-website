@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ProductCard from "./Productcard";
 import type { Product } from "./Productcard";
+import { Link } from "react-router-dom";
 import {assets} from '../assets/assets'
 const exploreProducts: Product[] = [
   {
@@ -97,10 +98,10 @@ const ExploreProducts = () => {
 
         {/* Arrows */}
         <div className="flex items-center gap-2">
-          <button className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors">
+          <button className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors cursor-pointer">
             <ChevronLeft size={18} />
           </button>
-          <button className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors">
+          <button className="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors cursor-pointer">
             <ChevronRight size={18} />
           </button>
         </div>
@@ -110,7 +111,7 @@ const ExploreProducts = () => {
       <div className="border-b border-gray-200 mb-6" />
 
       {/* Products Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 cursor-pointer">
         {exploreProducts.map((product) => (
           <ProductCard key={product.id} product={product} showDiscount />
         ))}
@@ -118,9 +119,11 @@ const ExploreProducts = () => {
 
       {/* View All */}
       <div className="flex justify-center mt-10">
-        <button className="px-12 py-3 bg-red-500 hover:bg-red-600 text-white text-sm font-medium rounded transition-colors">
+        <Link to="/Wishlist">
+        <button className="px-12 py-3 bg-red-500 hover:bg-red-600 text-white text-sm font-medium rounded transition-colors cursor-pointer">
           View All Products
         </button>
+        </Link>
       </div>
     </section>
   );

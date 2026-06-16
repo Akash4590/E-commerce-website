@@ -40,7 +40,7 @@ const StatsSection = () => {
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-16">
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 cursor-pointer">
         {stats.map((stat) => {
           const isActive = stat.id === activeId;
           return (
@@ -50,7 +50,7 @@ const StatsSection = () => {
               className={`flex flex-col items-center justify-center gap-4 py-10 px-6 rounded border transition-all duration-200 text-center ${
                 isActive
                   ? "bg-red-500 text-white border-red-500 shadow-lg"
-                  : "bg-white text-gray-800 border-gray-200 hover:border-red-300 hover:shadow-md"
+                  : "bg-white text-gray-800 border-gray-200 hover:border-red-300 hover:shadow-md cursor-pointer"
               }`}
             >
               {/* Icon circle */}

@@ -1,64 +1,17 @@
 import { Heart, Eye } from "lucide-react";
-import { assets } from "../../assets/assets";
-interface RelatedProduct {
-  id: number;
-  name: string;
-  price: number;
-  originalPrice: number;
-  rating: number;
-  reviewCount: number;
-  image: string;
-  discount?: number;
-}
-
-const relatedProducts: RelatedProduct[] = [
-  {
-    id: 1,
-    name: "HAVIT HV-G92 Gamepad",
-    price: 120,
-    originalPrice: 160,
-    rating: 4,
-    reviewCount: 88,
-    image: assets.Fy_pc,
-    discount: 40,
-  },
-  {
-    id: 2,
-    name: "AK-900 Wired Keyboard",
-    price: 960,
-    originalPrice: 1160,
-    rating: 4,
-    reviewCount: 75,
-    image: assets.fy_monitor,
-    discount: 35,
-  },
-  {
-    id: 3,
-    name: "IPS LCD Gaming Monitor",
-    price: 370,
-    originalPrice: 400,
-    rating: 5,
-    reviewCount: 99,
-    image: assets.fy_mouse,
-    discount: 30,
-  },
-  {
-    id: 4,
-    name: "RGB liquid CPU Cooler",
-    price: 160,
-    originalPrice: 170,
-    rating: 5,
-    reviewCount: 65,
-    image: assets.fy_keyboard,
-  },
-];
+import { Link } from "react-router-dom";
+import { products } from "../../data/products";
 
 const StarRating = ({ rating }: { rating: number }) => (
   <div className="flex items-center gap-0.5">
     {[1, 2, 3, 4, 5].map((star) => (
       <svg
         key={star}
-        className={`w-3.5 h-3.5 ${star <= Math.round(rating) ? "text-yellow-400" : "text-gray-300"}`}
+        className={`w-3.5 h-3.5 ${
+          star <= Math.round(rating)
+            ? "text-yellow-400"
+            : "text-gray-300"
+        }`}
         fill="currentColor"
         viewBox="0 0 20 20"
       >
@@ -71,16 +24,22 @@ const StarRating = ({ rating }: { rating: number }) => (
 const RelatedItems = () => {
   return (
     <section className="max-w-7xl mx-auto px-4 py-16">
-      {/* Section Header */}
+      {/* Header */}
       <div className="flex items-center gap-3 mb-10">
         <span className="w-4 h-8 bg-red-500 rounded-sm inline-block flex-shrink-0" />
-        <h2 className="text-lg font-semibold text-gray-900">Related Item</h2>
+        <h2 className="text-lg font-semibold text-gray-900">
+          Related Item
+        </h2>
       </div>
 
-      {/* Product Cards Grid */}
+      {/* Products Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {relatedProducts.map((product) => (
-          <div key={product.id} className="group relative bg-white">
+        {products.map((product) => (
+          <Link
+            key={product.id}
+            to={`/productDetails/${product.id}`}
+            className="group relative bg-white block cursor-pointer"
+          >
             {/* Image Container */}
             <div className="relative bg-gray-100 rounded overflow-hidden aspect-square flex items-center justify-center">
               {/* Discount Badge */}
@@ -92,10 +51,17 @@ const RelatedItems = () => {
 
               {/* Action Buttons */}
               <div className="absolute top-3 right-3 flex flex-col gap-2 z-10">
-                <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow hover:bg-red-50 transition-colors">
+                <button
+                  onClick={(e) => e.preventDefault()}
+                  className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow hover:bg-red-50 transition-colors"
+                >
                   <Heart size={14} className="text-gray-700" />
                 </button>
-                <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow hover:bg-red-50 transition-colors">
+
+                <button
+                  onClick={(e) => e.preventDefault()}
+                  className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow hover:bg-red-50 transition-colors"
+                >
                   <Eye size={14} className="text-gray-700" />
                 </button>
               </div>
@@ -110,8 +76,8 @@ const RelatedItems = () => {
                 }}
               />
 
-              {/* Add to Cart hover bar */}
-              <div className="absolute bottom-0 left-0 right-0 bg-black text-white text-xs font-medium text-center py-2.5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 cursor-pointer hover:bg-gray-900">
+              {/* Add To Cart */}
+              <div className="absolute bottom-0 left-0 right-0 bg-black text-white text-xs font-medium text-center py-2.5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-gray-900">
                 Add To Cart
               </div>
             </div>
@@ -121,22 +87,27 @@ const RelatedItems = () => {
               <h3 className="text-sm font-medium text-gray-900 truncate">
                 {product.name}
               </h3>
+
               <div className="flex items-center gap-2 mt-1">
                 <span className="text-sm font-semibold text-red-500">
                   ${product.price}
                 </span>
+
                 {product.originalPrice && (
                   <span className="text-sm text-gray-400 line-through">
                     ${product.originalPrice}
                   </span>
                 )}
               </div>
+
               <div className="flex items-center gap-1.5 mt-1">
-                <StarRating rating={product.rating} />
-                <span className="text-xs text-gray-400">({product.reviewCount})</span>
+                <StarRating rating={product.rating || 5} />
+                <span className="text-xs text-gray-400">
+                  ({product.reviewCount || 0})
+                </span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

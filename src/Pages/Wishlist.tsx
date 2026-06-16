@@ -139,7 +139,7 @@ const Wishlist = () => {
 
           <button
             onClick={moveAllToBag}
-            className="px-8 py-2.5 border border-gray-400 hover:border-gray-700 text-sm font-medium text-gray-800 rounded transition-colors"
+            className="px-8 py-2.5 border border-gray-400 hover:border-gray-700 text-sm font-medium text-gray-800 rounded transition-colors cursor-pointer"
           >
             Move All To Bag
           </button>
@@ -164,7 +164,7 @@ const Wishlist = () => {
                       e.preventDefault();
                       removeFromWishlist(product.id);
                     }}
-                    className="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow hover:bg-red-50 transition-colors z-10"
+                    className="absolute top-3 right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow hover:bg-red-50 transition-colors z-10 cursor-pointer"
                     aria-label="Remove"
                   >
                     <Trash2
@@ -206,7 +206,7 @@ const Wishlist = () => {
               </Link>
 
               {/* Add To Cart */}
-              <button className="w-full bg-black hover:bg-gray-900 text-white text-xs font-medium py-2.5 flex items-center justify-center gap-2 transition-colors mt-2">
+              <button className="w-full bg-black hover:bg-gray-900 text-white text-xs font-medium py-2.5 flex items-center justify-center gap-2 transition-colors mt-2 cursor-pointer">
                 <ShoppingCart size={13} />
                 Add To Cart
               </button>
@@ -223,7 +223,7 @@ const Wishlist = () => {
             </h2>
           </div>
 
-          <button className="px-8 py-2.5 border border-gray-400 hover:border-gray-700 text-sm font-medium text-gray-800 rounded transition-colors">
+          <button className="px-8 py-2.5 border border-gray-400 hover:border-gray-700 text-sm font-medium text-gray-800 rounded transition-colors cursor-pointer">
             See All
           </button>
         </div>
@@ -255,11 +255,11 @@ const Wishlist = () => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-contain p-6 group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain p-6 group-hover:scale-105 transition-transform duration-300 cursor-pointer"
                 />
               </div>
 
-              <button className="w-full bg-black hover:bg-gray-900 text-white text-xs font-medium py-2.5 flex items-center justify-center gap-2 transition-colors">
+              <button className="w-full bg-black hover:bg-gray-900 text-white text-xs font-medium py-2.5 flex items-center justify-center gap-2 transition-colors cursor-pointer">
                 <ShoppingCart size={13} />
                 Add To Cart
               </button>

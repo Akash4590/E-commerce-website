@@ -181,7 +181,7 @@ const Hero = () => {
         {/* Previous Button */}
         <button
           onClick={prevSlide}
-          className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full p-1 transition-colors z-10"
+          className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full p-1 transition-colors z-10 cursor-pointer"
           aria-label="Previous slide"
         >
           <ChevronLeft size={18} />
@@ -190,7 +190,7 @@ const Hero = () => {
         {/* Next Button */}
         <button
           onClick={nextSlide}
-          className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full p-1 transition-colors z-10"
+          className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full p-1 transition-colors z-10 cursor-pointer"
           aria-label="Next slide"
         >
           <ChevronRight size={18} />

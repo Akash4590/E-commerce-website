@@ -51,18 +51,18 @@ const Categories = () => {
 
         {/* Navigation Arrows */}
         <div className="flex items-center gap-3">
-          <button className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors">
+          <button className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors cursor-pointer">
             <ArrowLeft size={20} />
           </button>
 
-          <button className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors">
+          <button className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors cursor-pointer">
             <ArrowRight size={20} />
           </button>
         </div>
       </div>
 
       {/* Category Cards */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5 ">
         {categories.map((cat) => (
           <button
             key={cat.id}
@@ -70,7 +70,7 @@ const Categories = () => {
             className={`h-[145px] flex flex-col items-center justify-center gap-4 rounded border transition-all duration-200 ${
               activeId === cat.id
                 ? "bg-red-500 text-white border-red-500"
-                : "bg-white text-gray-700 border-gray-300 hover:border-red-400 hover:text-red-500"
+                : "bg-white text-gray-700 border-gray-300 hover:border-red-400 hover:text-red-500 cursor-pointer"
             }`}
           >
             <div>{cat.icon}</div>

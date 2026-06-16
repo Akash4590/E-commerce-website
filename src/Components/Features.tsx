@@ -31,7 +31,7 @@ const features: Feature[] = [
 const Features = () => {
   return (
     <section className="max-w-7xl mx-auto px-4 py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 text-center">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 text-center cursor-pointer">
         {features.map((feature) => (
           <div key={feature.id} className="flex flex-col items-center gap-4">
             {/* Icon circle */}

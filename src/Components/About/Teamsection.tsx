@@ -61,7 +61,7 @@ const TeamSection = () => {
         {teamMembers.map((member) => (
           <div key={member.id} className="flex flex-col">
             {/* Photo */}
-            <div className="w-full aspect-[4/4] bg-gray-100 rounded-sm overflow-hidden">
+            <div className="w-full aspect-[4/4] bg-gray-100 rounded-sm overflow-hidden cursor-pointer">
               <img
                 src={member.image}
                 alt={member.name}
@@ -76,7 +76,7 @@ const TeamSection = () => {
 
             {/* Info */}
             <div className="mt-4">
-              <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
+              <h3 className="text-xl font-semibold text-gray-900 cursor-pointer">{member.name}</h3>
               <p className="text-sm text-gray-500 mt-0.5">{member.role}</p>
               <SocialLinks />
             </div>

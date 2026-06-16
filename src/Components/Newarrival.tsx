@@ -15,7 +15,7 @@ const NewArrival = () => {
       {/* Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[32px] h-auto md:h-[600px]">
         {/* Left Large Banner - PlayStation */}
-        <div className="relative bg-black rounded-lg overflow-hidden flex items-end p-8 min-h-[300px] md:min-h-0">
+        <div className="relative bg-black rounded-lg overflow-hidden flex items-end p-8 min-h-[300px] md:min-h-0 cursor-pointer">
           <img
             src={assets.PS5_c}
             alt="PlayStation 5"
@@ -36,7 +36,7 @@ const NewArrival = () => {
         </div>
 
         {/* Right Column */}
-        <div className="grid grid-rows-2 gap-[32px] h-full">
+        <div className="grid grid-rows-2 gap-[32px] h-full cursor-pointer">
           {/* Top Right - Women's Collections */}
           <div className="relative bg-black  rounded-lg overflow-hidden flex items-end p-8 min-h-[200px]">
             <img
@@ -59,7 +59,7 @@ className="absolute inset-0 w-full h-full object-contain opacity-70"
           </div>
 
           {/* Bottom Row - Two cards */}
-          <div className="grid grid-cols-2 gap-[32px]">
+          <div className="grid grid-cols-2 gap-[32px] cursor-pointer">
             {/* Speakers */}
             <div className="relative bg-black rounded-lg overflow-hidden flex items-end p-6 min-h-[180px]">
               <img
@@ -80,7 +80,7 @@ className="absolute inset-0 w-full h-full object-contain opacity-70"
             </div>
 
             {/* Perfume */}
-            <div className="relative bg-black  rounded-lg overflow-hidden flex items-end p-6 min-h-[180px]">
+            <div className="relative bg-black  rounded-lg overflow-hidden flex items-end p-6 min-h-[180px] cursor-pointer">
               <img
                 src={assets.Gucci_c}
                 alt="Perfume"

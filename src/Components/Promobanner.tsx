@@ -61,7 +61,7 @@ const PromoBanner = () => {
             <CircleBlock label="Seconds" value={timeLeft.seconds} />
           </div>
 
-          <button className="px-10 py-3 bg-green-400 hover:bg-green-500 text-black text-sm font-semibold rounded transition-colors">
+          <button className="px-10 py-3 bg-green-400 hover:bg-green-500 text-black text-sm font-semibold rounded transition-colors cursor-pointer">
             Buy Now!
           </button>
         </div>
@@ -71,7 +71,7 @@ const PromoBanner = () => {
           <img
             src={assets.speaker_img}
             alt="Speaker"
-            className="max-h-64 md:max-h-80 object-contain drop-shadow-2xl"
+            className="max-h-64 md:max-h-80 object-contain drop-shadow-2xl cursor-pointer"
             onError={(e) => {
               (e.target as HTMLImageElement).style.opacity = "0";
             }}

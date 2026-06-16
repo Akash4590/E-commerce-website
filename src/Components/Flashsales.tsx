@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import ProductCard from "./Productcard";
 import type { Product } from "./Productcard";
 import { assets } from "../assets/assets";
+import { Link } from "react-router-dom";
 
 const flashProducts: Product[] = [
   {
@@ -154,18 +155,18 @@ const FlashSales = () => {
 
         {/* Arrow Buttons */}
         <div className="flex items-center gap-3">
-          <button className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition">
+          <button className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition cursor-pointer">
             <ArrowLeft size={18} />
           </button>
 
-          <button className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition">
+          <button className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition cursor-pointer">
             <ArrowRight size={18} />
           </button>
         </div>
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 cursor-pointer">
         {flashProducts.slice(0, 4).map((product) => (
           <ProductCard
             key={product.id}
@@ -177,9 +178,11 @@ const FlashSales = () => {
 
       {/* View All Button */}
       <div className="flex justify-center mt-10">
-        <button className="px-12 py-3 bg-red-500 hover:bg-red-600 text-white text-sm font-medium rounded transition-colors">
-          View All Products
-        </button>
+        <Link to="/Wishlist">
+  <button className="px-12 py-3 bg-red-500 hover:bg-red-600 text-white text-sm font-medium rounded transition-colors cursor-pointer">
+    View All Products
+  </button>
+</Link>
       </div>
     </section>
   );

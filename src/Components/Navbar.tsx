@@ -74,11 +74,11 @@ const Navbar = ({ showIcons = true }: NavbarProps) => {
           {/* Icons */}
           {showIcons && (
             <>
-              <button className="relative p-1 hover:text-red-500 transition-colors">
+              <button className="relative p-1 hover:text-red-500 transition-colors cursor-pointer">
                 <Heart size={22} />
               </button>
 
-              <button className="relative p-1 hover:text-red-500 transition-colors">
+              <button className="relative p-1 hover:text-red-500 transition-colors cursor-pointer">
                 <ShoppingCart size={22} />
                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-semibold">
                   2
@@ -91,7 +91,7 @@ const Navbar = ({ showIcons = true }: NavbarProps) => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(true)}
-          className="md:hidden p-2"
+          className="md:hidden p-2 cursor-pointer"
           aria-label="Open Menu"
         >
           <Menu size={28} />
@@ -116,7 +116,7 @@ const Navbar = ({ showIcons = true }: NavbarProps) => {
         <div className="flex items-center justify-between px-5 py-5 border-b">
           <h2 className="text-2xl font-bold">Menu</h2>
 
-          <button onClick={closeMenu} aria-label="Close Menu">
+          <button className="cursor-pointer" onClick={closeMenu} aria-label="Close Menu">
             <X size={28} />
           </button>
         </div>
@@ -156,11 +156,11 @@ const Navbar = ({ showIcons = true }: NavbarProps) => {
         {showIcons && (
           <div className="border-t px-5 py-6">
             <div className="flex items-center gap-6">
-              <button className="relative hover:text-red-500 transition-colors">
+              <button className="relative hover:text-red-500 transition-colors cursor-pointer">
                 <Heart size={24} />
               </button>
 
-              <button className="relative hover:text-red-500 transition-colors">
+              <button className="relative hover:text-red-500 transition-colors cursor-pointer">
                 <ShoppingCart size={24} />
                 <span className="absolute -top-1 -right-2 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">
                   2

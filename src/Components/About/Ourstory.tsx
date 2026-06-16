@@ -6,10 +6,10 @@ const OurStory = () => {
 
         {/* Left — Text */}
         <div>
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8 cursor-pointer">
             Our Story
           </h1>
-          <p className="text-sm text-gray-600 leading-relaxed mb-5">
+          <p className="text-sm text-gray-600 leading-relaxed mb-5 cursor-pointer">
             Launced in 2015, Exclusive is South Asia's premier online shopping
             marketplace with an active presense in Bangladesh. Supported by wide
             range of tailored marketing, data and service solutions, Exclusive has
@@ -28,7 +28,7 @@ const OurStory = () => {
           <img
             src={assets.About_1st}
             alt="Our Story"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover cursor-pointer"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.parentElement!.className =
