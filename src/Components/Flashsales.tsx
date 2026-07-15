@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import ProductCard from "./Productcard";
-import type { Product } from "./Productcard";
+import ProductCard from "./ProductCard";
+import type { Product } from "./ProductCard";
 import { assets } from "../assets/assets";
 import { Link } from "react-router-dom";
 

@@ -1,6 +1,6 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import ProductCard from "./Productcard";
-import type { Product } from "./Productcard";
+import ProductCard from "./ProductCard";
+import type { Product } from "./ProductCard";
 import { Link } from "react-router-dom";
 import {assets} from '../assets/assets'
 const exploreProducts: Product[] = [

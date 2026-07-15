@@ -1,4 +1,3 @@
-import React from 'react'
 import AnnouncementBar from '../Components/Announcementbar'
 import Navbar from '../Components/Navbar'
 import Hero from '../Components/Hero'
